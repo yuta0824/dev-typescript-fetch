@@ -36,19 +36,11 @@ export const getInputElementById = (id: string): HTMLInputElement => {
  * @param className 要素のクラス属性
  * @returns HTMLElement
  */
-export const createElement = (
-  elementName: string,
-  textContent?: string,
-  className?: string
-): HTMLElement => {
+export const createElement = (elementName: string, textContent?: string): HTMLElement => {
   const element = document.createElement(elementName);
 
   if (typeof textContent !== "undefined") {
     element.textContent = textContent;
-  }
-
-  if (typeof className !== "undefined") {
-    element.className = className;
   }
 
   return element;
