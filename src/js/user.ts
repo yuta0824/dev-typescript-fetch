@@ -30,6 +30,11 @@ type Company = {
   bs: string;
 };
 
+/**
+ * ユーザー情報をAPIから取得する
+ *
+ * @returns Promise<Users[]>
+ */
 export const fetchUserList = async (): Promise<Users[]> => {
   const response = await fetch("https://jsonplaceholder.typicode.com/users/");
 
@@ -48,6 +53,12 @@ export const fetchUserList = async (): Promise<Users[]> => {
   return users;
 };
 
+/**
+ * ユーザー情報をDOMに追加する
+ *
+ * @param users APIで取得したユーザー情報
+ * @returns void
+ */
 export const appendUserList = (users: Users[]): void => {
   const userList = getElementById("user-list");
 
@@ -57,6 +68,11 @@ export const appendUserList = (users: Users[]): void => {
   });
 };
 
+/**
+ * ユーザー情報を削除する
+ *
+ * @returns void
+ */
 export const removeUsersElement = (): void => {
   const userList = getElementById("user-list");
 
