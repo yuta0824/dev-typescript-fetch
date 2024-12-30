@@ -43,13 +43,6 @@ export const fetchUserList = async (): Promise<Users[]> => {
   }
 
   const users: Users[] = await response.json();
-
-  // // バリデーション
-  // users.forEach((user) => {
-  //   if (typeof user.id !== "number") throw new Error(`id is not a number`);
-  //   if (typeof user.name !== "string") throw new Error(`id is not a number`);
-  // });
-
   return users;
 };
 
